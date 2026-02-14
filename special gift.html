@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Love ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(to bottom,#ff9a9e,#fecfef);
+text-align:center;
+color:white;
+overflow-x:hidden;
+}
+
+.page{
+display:none;
+padding:40px 20px;
+min-height:100vh;
+position:relative;
+}
+
+.active{
+display:block;
+}
+
+h1{font-size:32px;margin-bottom:20px;}
+h2{font-size:26px;}
+h3{font-size:22px;}
+
+p{
+font-size:18px;
+max-width:400px;
+margin:auto;
+line-height:1.6;
+}
+
+button{
+padding:14px 28px;
+margin:12px;
+border:none;
+border-radius:30px;
+background:linear-gradient(45deg,#ff4b5c,#ff758c);
+color:white;
+font-size:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.gift-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:20px;
+}
+
+img{
+max-width:90%;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.big-gif{
+width:260px;
+margin-top:30px;
+}
+
+.quiz-btn{
+display:block;
+margin:12px auto;
+background:linear-gradient(45deg,#ff6a88,#ff99ac);
+}
+
+/* HEART RAIN */
+.heart{
+position:fixed;
+top:-10px;
+font-size:20px;
+color:red;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(100vh);}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+<h1>Will You Be Mine? 🥺❤️</h1>
+<p>You are the most special person in my life...</p>
+<button onclick="showPage('page5')">Yes 💖</button>
+<button onclick="showPage('page2')">No 😏</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+<h2>Are You Sure? 😭</h2>
+
+<video width="180" autoplay loop muted style="border-radius:15px;">
+<source src="doll.mp4" type="video/mp4">
+</video>
+<p>I know you love me</p>
+<br>
+<button onclick="showPage('page5')">Please Click Yes 💘</button>
+</div>
+
+<!-- VALENTINE PAGE -->
+<div id="page5" class="page">
+
+<!-- GIF ABOVE TITLE -->
+<img src="valentine.gif" style="width:220px;margin-bottom:20px;">
+
+<h1>Happy Valentine's Day My Forever ❤️</h1>
+<p>I have something very special for you... 👉</p>
+
+<button onclick="showPage('page6')">Collect My Gift 🎁 🎀</button>
+</div>
+
+<!-- GIFT OPTIONS PAGE -->
+<div id="page6" class="page">
+<h2>Something For You 🤗💝</h2>
+
+<div class="gift-box">
+<button onclick="showPage('quiz1')">First Gift 😏</button>
+<button onclick="showPage('letter')">Second Gift 💌</button>
+<button onclick="showPage('memories')">Third Gift 🤗</button>
+</div>
+
+<!-- BIG GIF BELOW BUTTONS -->
+<img src="biggift.gif" class="big-gif">
+
+<br>
+<button onclick="showPage('forever')">Final Gift 💍</button>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz1" class="page">
+<h3>Who is the Boss in this relationship? 😏</h3>
+<button class="quiz-btn" onclick="nextQuiz()">Obviously You ☺️❤️</button>
+<button class="quiz-btn">Me 😜</button>
+<button class="quiz-btn">My Mom 😂</button>
+<button class="quiz-btn">My Dad 🤣</button>
+<button onclick="showPage('page6')">Back</button>
+</div>
+
+<div id="quiz2" class="page">
+<h3>Where do I plan to spend my life? 😘</h3>
+<button class="quiz-btn" onclick="showPage('win')">In Your Heart 💖</button>
+<button class="quiz-btn">Paris ✈️</button>
+<button class="quiz-btn">Mars 🚀🙂</button>
+</div>
+
+<div id="win" class="page">
+<h2>You Win! 🎉</h2>
+<p>I knew you could do it! I love you sooo much 😚❤️</p>
+<button onclick="showPage('page6')">Back</button>
+</div>
+
+<!-- LETTER -->
+<div id="letter" class="page">
+<h2>A Letter For You 💖</h2>
+
+<p>
+<h1>My Baby</h1>,<br><br>
+<h3><i><font color="black"Thank you for being my person.<br>
+You are my everything and my peace.<br>
+Thank you for loving me, for understanding me, for supporting me, and for being patient with me. I may not always express my appearance perfectly, but I truly appreciate everything you do. I promise to always stand by you, protect you, respect you, and love you with all my heart.
+You are my today, my tomorrow, and my always.
+No matter what happens, I choose you — again and again.
+I love you more than words can explain.
+Happy Valentine’s Day, My Forever ❤️</font></i></h3><br><br>
+<font size="20">Forever Yours ♥️</font>
+</p>
+
+<h3 style="margin-top:20px;">Forever Yours ♥️</h3>
+
+<button onclick="showPage('page6')">Back</button>
+</div>
+
+<!-- MEMORIES -->
+<div id="memories" class="page">
+<h2>See Our Best Memories 🤗</h2>
+<br>
+<img src="pic1.jpg"><br><br>
+<img src="pic2.jpg"><br><br>
+<img src="pic3.jpg"><br><br>
+<img src="pic4.jpg"><br><br>
+<img src="pic5.jpg"><br><br>
+<img src="pic6.jpg"><br><br>
+<button onclick="showPage('page6')">Back</button>
+</div>
+
+<!-- FINAL GIFT -->
+<div id="forever" class="page">
+<h1>You Are My Forever 🤗❤️</h1>
+
+<br>
+<img src="forever.jpg" style="width:300px;">
+<br><br>
+
+<p>
+I love you more than words can say ❤️<br>
+No matter where life takes us,<br>
+I will always choose you.<br><br>
+You are my today, tomorrow, and forever🤗🤗😚 💍<br>
+Again I Love You Sooo Soooo Muchh 😚🤗
+</p>
+
+<br>
+<button onclick="showPage('page6')" style="background:black;">Close</button>
+</div>
+
+<script>
+
+function showPage(pageId){
+var pages=document.querySelectorAll(".page");
+pages.forEach(p=>p.classList.remove("active"));
+document.getElementById(pageId).classList.add("active");
+
+if(pageId==="forever"){
+startHearts();
+}
+}
+
+function nextQuiz(){
+showPage('quiz2');
+}
+
+/* HEART RAIN */
+function startHearts(){
+for(let i=0;i<40;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(2+Math.random()*3)+"s";
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove();},5000);
+}
+}
+
+</script>
+
+</body>
+</html>
